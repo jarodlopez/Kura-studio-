@@ -2,12 +2,19 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
+    <!-- El logo se busca en la raíz del servidor, que es /public/logo.png -->
     <link rel="icon" type="image/svg+xml" href="/logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>KURA STUDIO | Nicaragua</title>
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <!-- 
+      *** CORRECCIÓN CLAVE ***
+      Aseguramos que el script apunte a la raíz con `/src/main.jsx` 
+      en lugar de `./src/main.jsx` para evitar problemas de ruta en la compilación.
+    -->
+    <script type="module" src="/src/main.jsx"></script> 
   </body>
 </html>
+
